@@ -29,6 +29,7 @@ struct ProfileImage: View {
     var body: some View {
         Image(imageName)
             .resizable()
+            .aspectRatio(contentMode: .fill)
             .frame(width: size, height: size)
             .clipShape(RoundedRectangle(cornerRadius: radius))
             .shadow(radius: 10)
