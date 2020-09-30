@@ -44,8 +44,9 @@ struct Family: Identifiable {
     var aidant: Profile
 }
 
-struct Message {
-    var sender: Int
+struct Message: Identifiable {
+    var id = UUID()
+    var sender: Profile
     var timestamp: Date
     var message: String
 }

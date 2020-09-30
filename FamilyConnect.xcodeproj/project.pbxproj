@@ -17,6 +17,9 @@
 		F0FAED9D25249D1700F7CCA2 /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED9C25249D1700F7CCA2 /* MatchRow.swift */; };
 		F0FAEDA02524A01F00F7CCA2 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */; };
 		F0FAEDA32524A63F00F7CCA2 /* ServiceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDA22524A63E00F7CCA2 /* ServiceIcon.swift */; };
+		F0FAEDA62524CA2D00F7CCA2 /* MessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */; };
+		F0FAEDAB2524D27600F7CCA2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */; };
+		F0FAEDAE2524D80F00F7CCA2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		F0FAED9C25249D1700F7CCA2 /* MatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
 		F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		F0FAEDA22524A63E00F7CCA2 /* ServiceIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIcon.swift; sourceTree = "<group>"; };
+		F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContentView.swift; sourceTree = "<group>"; };
+		F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 				F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */,
 				F0FAED7A25247B0600F7CCA2 /* ContentView.swift */,
 				F0FAED942524808600F7CCA2 /* MatchesView.swift */,
+				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
 				F0FAED972524817A00F7CCA2 /* Data.swift */,
 				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
@@ -91,6 +98,8 @@
 				F0FAED9C25249D1700F7CCA2 /* MatchRow.swift */,
 				F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */,
 				F0FAEDA22524A63E00F7CCA2 /* ServiceIcon.swift */,
+				F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */,
+				F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -168,10 +177,13 @@
 				F0FAED982524817A00F7CCA2 /* Data.swift in Sources */,
 				F0FAEDA02524A01F00F7CCA2 /* ProfileImage.swift in Sources */,
 				F0FAED9D25249D1700F7CCA2 /* MatchRow.swift in Sources */,
+				F0FAEDAE2524D80F00F7CCA2 /* ChatView.swift in Sources */,
+				F0FAEDAB2524D27600F7CCA2 /* MessageView.swift in Sources */,
 				F0FAED8D25247C4C00F7CCA2 /* Modele.swift in Sources */,
 				F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */,
 				F0FAEDA32524A63F00F7CCA2 /* ServiceIcon.swift in Sources */,
 				F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */,
+				F0FAEDA62524CA2D00F7CCA2 /* MessageContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

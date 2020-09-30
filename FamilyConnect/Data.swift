@@ -28,3 +28,13 @@ var families = [
     Family(familyName: "Johansson", aide: profiles[0], aidant: profiles[1]),
     Family(familyName: "Hemsworth", aide: profiles[1], aidant: profiles[2])
 ]
+
+var currentUser = Profile(firstName: "Garrison", lastName: "Blair", imageName: "", city: "Paris", birthDate: Date(), age: 24, languages: [french], description: "", services: [walk, clean, social], rating: 5.0)
+
+var messages = [
+    Message(sender: currentUser, timestamp: Date(), message: "Le 26/09/2020 à 14:38, ce correspondant a cherché à vous joindre 1 fois sans laisser de message."),
+    Message(sender: profiles[0], timestamp: Date(), message: "Le 26/09/2020 à 14:38, ce correspondant a cherché à vous joindre 1 fois sans laisser de message."),
+    Message(sender: currentUser, timestamp: Date(), message: "Hello There"),
+]
+
+var conversation = Conversation(matchedProfile: profiles[0], messages: messages)
