@@ -31,7 +31,7 @@ struct MatchRow: View {
                    maxWidth: .infinity,
                    minHeight: 0,
                    maxHeight: 175)
-            }
+        }
     }
 }
 
