@@ -8,20 +8,46 @@
 import SwiftUI
 
 struct ChatView: View {
-    var conversation: Conversation
+    @State var typingMessage: String = ""
+    @State var conversation: Conversation
     
     var body: some View {
         ZStack {
             Color("appBackground").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            ScrollView {
-                LazyVStack(content: {
-                    ForEach(0...conversation.messages.count-1, id: \.self) { count in
-                        MessageView(message: conversation.messages[count])
-                            .padding(.trailing)
+            VStack {
+                ScrollView {
+                    LazyVStack(content: {
+                        ForEach(0...conversation.messages.count-1, id: \.self) { count in
+                            MessageView(message: conversation.messages[count])
+                                .padding(.horizontal)
+                        }
+                    })
+                }
+                HStack {
+                    TextField("Message...", text: $typingMessage)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(minHeight: 30)
+                    Button(action: {
+                        if typingMessage != "" {
+                            let message = Message(sender: currentUser, timestamp: Date(), message: typingMessage)
+                            
+                            conversation.messages.append(message)
+                            typingMessage = ""
+                        }
+                        UIApplication.shared.endEditing()
+                    }) {
+                        Text("Send")
                     }
-                })
+                }
+                .frame(minHeight: CGFloat(50)).padding()
             }
         }
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
