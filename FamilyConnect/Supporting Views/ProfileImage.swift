@@ -9,15 +9,31 @@ import SwiftUI
 
 struct ProfileImage: View {
     let imageName: String
+    var size: CGFloat = 175
+    var radius: CGFloat {
+        size / 4
+    }
+    var stroke: CGFloat {
+        size / 35
+    }
+    
+    init(imageName: String) {
+        self.imageName = imageName
+    }
+    
+    init(imageName: String, size: CGFloat) {
+        self.imageName = imageName
+        self.size = size
+    }
     
     var body: some View {
         Image(imageName)
             .resizable()
-            .frame(width: 175, height: 175)
-            .clipShape(RoundedRectangle(cornerRadius: 45.0))
+            .frame(width: size, height: size)
+            .clipShape(RoundedRectangle(cornerRadius: radius))
             .shadow(radius: 10)
-            .overlay(RoundedRectangle(cornerRadius: 45.0)
-            .stroke(Color("appOrange"), lineWidth: 5))
+            .overlay(RoundedRectangle(cornerRadius: radius)
+            .stroke(Color("appOrange"), lineWidth: stroke))
     }
 }
 
