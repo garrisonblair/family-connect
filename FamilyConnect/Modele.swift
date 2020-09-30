@@ -33,11 +33,12 @@ struct Profile: Identifiable {
     var age: Int
     var languages: [Language]
     var description: String
-    var Services: [Service]
+    var services: [Service]
     var rating: Double
 }
 
-struct Family {
+struct Family: Identifiable {
+    var id = UUID()
     var familyName: String
     var aide: Profile
     var aidant: Profile
@@ -49,7 +50,8 @@ struct Message {
     var message: String
 }
 
-struct Conversation {
+struct Conversation: Identifiable {
+    var id = UUID()
     var matchedProfile: Profile
     var messages: [Message]
 }
