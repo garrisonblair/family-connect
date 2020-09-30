@@ -32,6 +32,8 @@ struct MatchRow: View {
                    minHeight: 0,
                    maxHeight: 175)
         }
+        .padding([.top, .leading, .bottom])
+//        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
     }
 }
 

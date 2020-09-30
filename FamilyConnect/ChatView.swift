@@ -11,13 +11,16 @@ struct ChatView: View {
     var conversation: Conversation
     
     var body: some View {
-        ScrollView {
-            LazyVStack(content: {
-                ForEach(0...conversation.messages.count-1, id: \.self) { count in
-                    MessageView(message: conversation.messages[count])
-                        .padding(.trailing)
-                }
-            })
+        ZStack {
+            Color("appBackground").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            ScrollView {
+                LazyVStack(content: {
+                    ForEach(0...conversation.messages.count-1, id: \.self) { count in
+                        MessageView(message: conversation.messages[count])
+                            .padding(.trailing)
+                    }
+                })
+            }
         }
     }
 }
