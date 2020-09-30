@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct MatchesView: View {
+    let matches: [Family]
+    
     var body: some View {
-        Text("Hello world")
+        VStack(alignment: .leading) {
+            NavigationView {
+                List(matches) { match in
+                    NavigationLink(destination: MatchRow(family: match)) {
+                        MatchRow(family: match)
+                            .padding(.vertical)
+                    }
+                }
+                .navigationTitle("Matchs")
+            }
+        }
     }
 }
 
 struct MatchesView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchesView()
+        MatchesView(matches: families)
     }
 }
