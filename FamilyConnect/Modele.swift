@@ -23,10 +23,11 @@ struct Rating {
     var comment: String
 }
 
-struct Profile {
+struct Profile: Identifiable {
+    var id = UUID()
     var firstName: String
     var lastName: String
-    var image: CGImage
+    var imageName: String
     var city: String
     var birthDate: Date
     var age: Int
@@ -40,4 +41,15 @@ struct Family {
     var familyName: String
     var aide: Profile
     var aidant: Profile
+}
+
+struct Message {
+    var sender: Int
+    var timestamp: Date
+    var message: String
+}
+
+struct Conversation {
+    var matchedProfile: Profile
+    var messages: [Message]
 }

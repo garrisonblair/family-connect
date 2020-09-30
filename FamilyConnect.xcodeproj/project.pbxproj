@@ -11,6 +11,9 @@
 		F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7A25247B0600F7CCA2 /* ContentView.swift */; };
 		F0FAED7D25247B0800F7CCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */; };
 		F0FAED8025247B0800F7CCA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FAED7F25247B0800F7CCA2 /* Preview Assets.xcassets */; };
+		F0FAED8D25247C4C00F7CCA2 /* Modele.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED8C25247C4C00F7CCA2 /* Modele.swift */; };
+		F0FAED952524808600F7CCA2 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED942524808600F7CCA2 /* MatchesView.swift */; };
+		F0FAED982524817A00F7CCA2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED972524817A00F7CCA2 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0FAED7F25247B0800F7CCA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F0FAED8125247B0800F7CCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FAED8C25247C4C00F7CCA2 /* Modele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modele.swift; sourceTree = "<group>"; };
+		F0FAED942524808600F7CCA2 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		F0FAED972524817A00F7CCA2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 			children = (
 				F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */,
 				F0FAED7A25247B0600F7CCA2 /* ContentView.swift */,
+				F0FAED942524808600F7CCA2 /* MatchesView.swift */,
+				F0FAED972524817A00F7CCA2 /* Data.swift */,
+				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
 				F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */,
 				F0FAED8125247B0800F7CCA2 /* Info.plist */,
 				F0FAED7E25247B0800F7CCA2 /* Preview Content */,
@@ -138,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FAED952524808600F7CCA2 /* MatchesView.swift in Sources */,
+				F0FAED982524817A00F7CCA2 /* Data.swift in Sources */,
+				F0FAED8D25247C4C00F7CCA2 /* Modele.swift in Sources */,
 				F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */,
 				F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */,
 			);
