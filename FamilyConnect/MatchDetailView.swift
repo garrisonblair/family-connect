@@ -35,6 +35,18 @@ struct MatchDetailView: View {
                 .tag(1)
         }
         .sheet(isPresented: $showMessageView, content: {
+            HStack{
+                Text("\(family.aidant.firstName) \(family.aidant.lastName)")
+                    .font(.title2)
+                Spacer()
+                Button(action: {
+                    self.showMessageView.toggle()
+                }, label: {
+                    Text("Done")
+                })
+            }
+            .padding()
+            .background(Color.white)
             ChatView(conversation: getConversation(with: family.aidant))
         })
         .tabViewStyle(PageTabViewStyle())
@@ -44,7 +56,7 @@ struct MatchDetailView: View {
             selection == 0 ? self.showMessageView.toggle() : nil
         }, label: {
             Text("Contacter")
-                .foregroundColor(selection == 0 ? .blue : .gray)
+                .foregroundColor(selection == 0 ? Color("appOrange") : .gray)
         }))
     }
 }

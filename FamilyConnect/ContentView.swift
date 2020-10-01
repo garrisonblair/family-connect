@@ -14,7 +14,7 @@ struct ContentView: View {
         TabView(selection:$selection) {
             MatchesView(matches: families)
                 .tabItem {
-                    Text("Matches")
+                    Text("Matchs")
                     Image(systemName: "link")
                 }
                 .tag(0)
