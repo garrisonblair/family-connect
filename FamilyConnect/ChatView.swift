@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatView: View {
     @State var typingMessage: String = ""
     @State var conversation: Conversation
+    @State var showEvaluationView: Bool = false
     
     var body: some View {
         ZStack {
@@ -44,6 +45,15 @@ struct ChatView: View {
                 .frame(minHeight: CGFloat(50)).padding()
             }
         }
+        .sheet(isPresented: $showEvaluationView, content: {
+            Text("Evaluation")
+        })
+        .navigationBarTitle("\(conversation.matchedProfile.firstName) \(conversation.matchedProfile.lastName)", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.showEvaluationView.toggle()
+        }, label: {
+            Text("Evaluer")
+        }))
     }
 }
 

@@ -24,7 +24,7 @@ struct ContentView: View {
                     Image(systemName: "person.2.fill")
                 }
                 .tag(1)
-            ChatView(conversation: conversation)
+            ConversationsList(conversations: conversations)
                 .tabItem {
                     Text("Conversations")
                     Image(systemName: "bubble.left.fill")
