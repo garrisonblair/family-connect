@@ -13,6 +13,7 @@
 		F0808CE42525D19700A1AB88 /* AboutProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0808CE32525D19700A1AB88 /* AboutProfileView.swift */; };
 		F0B9776F2525D5BE00438727 /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9776E2525D5BE00438727 /* ProfileInformation.swift */; };
 		F0B977742525DD2A00438727 /* RatingCommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B977732525DD2A00438727 /* RatingCommentRow.swift */; };
+		F0B9777F25260A7C00438727 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9777E25260A7C00438727 /* ConversationRow.swift */; };
 		F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */; };
 		F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7A25247B0600F7CCA2 /* ContentView.swift */; };
 		F0FAED7D25247B0800F7CCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		F0808CE32525D19700A1AB88 /* AboutProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProfileView.swift; sourceTree = "<group>"; };
 		F0B9776E2525D5BE00438727 /* ProfileInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
 		F0B977732525DD2A00438727 /* RatingCommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCommentRow.swift; sourceTree = "<group>"; };
+		F0B9777E25260A7C00438727 /* ConversationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRow.swift; sourceTree = "<group>"; };
 		F0FAED7525247B0600F7CCA2 /* FamilyConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyConnectApp.swift; sourceTree = "<group>"; };
 		F0FAED7A25247B0600F7CCA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */,
 				F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */,
+				F0B9777E25260A7C00438727 /* ConversationRow.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				F0FAED952524808600F7CCA2 /* MatchesView.swift in Sources */,
 				F0808CDC2525D02B00A1AB88 /* LanguageDescription.swift in Sources */,
 				F0B9776F2525D5BE00438727 /* ProfileInformation.swift in Sources */,
+				F0B9777F25260A7C00438727 /* ConversationRow.swift in Sources */,
 				F0FAED982524817A00F7CCA2 /* Data.swift in Sources */,
 				F0B977742525DD2A00438727 /* RatingCommentRow.swift in Sources */,
 				F0FAEDA02524A01F00F7CCA2 /* ProfileImage.swift in Sources */,

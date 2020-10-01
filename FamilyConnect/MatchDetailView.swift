@@ -41,9 +41,10 @@ struct MatchDetailView: View {
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .navigationBarTitle(title, displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
-            self.showMessageView.toggle()
+            selection == 0 ? self.showMessageView.toggle() : nil
         }, label: {
             Text("Contacter")
+                .foregroundColor(selection == 0 ? .blue : .gray)
         }))
     }
 }
@@ -53,14 +54,12 @@ func getConversation(with profile: Profile) -> Conversation {
     for item in conversations {
         if item.matchedProfile.id == profile.id {
             conversation = item
-            print("EXISTS")
             break
         }
     }
     if conversation == nil {
         conversation = Conversation(matchedProfile: profile, messages: [])
         conversations.append(conversation!)
-        print("NEW")
     }
     return conversation!
 }
