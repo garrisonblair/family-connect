@@ -16,10 +16,12 @@ struct LanguageDescription: View {
                 Text("\(languages[count].image) \(languages[count].name)")
                 if count != languages.count - 1 {
                     Divider()
-                        .background(/*@START_MENU_TOKEN@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
+                        .background(Color("appBackground"))
+                        .frame(maxHeight: 50)
                 }
             }
         }
+        .padding(.top, languages.count == 1 ? 5.0 : 0.0)
     }
 }
 
