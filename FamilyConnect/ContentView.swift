@@ -25,6 +25,8 @@ struct ContentView: View {
                 }
                 .tag(1)
         }
+//        .tabViewStyle(PageTabViewStyle())
+//        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 

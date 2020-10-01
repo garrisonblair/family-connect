@@ -31,8 +31,10 @@ struct MatchRow: View {
                    maxWidth: .infinity,
                    minHeight: 0,
                    maxHeight: 175)
+            Image(systemName: "chevron.right")
+                .foregroundColor(Color("appOrange"))
         }
-        .padding([.top, .leading, .bottom])
+        .padding(.all)
 //        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
     }
 }
