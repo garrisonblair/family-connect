@@ -127,13 +127,13 @@
 				F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */,
 				F0FAED942524808600F7CCA2 /* MatchesView.swift */,
 				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
+				F0B9778125260BAF00438727 /* ConversationsList.swift */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
 				F0FAED972524817A00F7CCA2 /* Data.swift */,
 				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
 				F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */,
 				F0FAED8125247B0800F7CCA2 /* Info.plist */,
 				F0FAED7E25247B0800F7CCA2 /* Preview Content */,
-				F0B9778125260BAF00438727 /* ConversationsList.swift */,
 			);
 			path = FamilyConnect;
 			sourceTree = "<group>";

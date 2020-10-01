@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConversationsList: View {
-    var conversations: [Conversation]
+    @State var conversations: [Conversation]
     
     var body: some View {
         NavigationView {
@@ -21,17 +21,19 @@ struct ConversationsList: View {
                                 ConversationRow(conversation: conversations[count])
                             })
                     }
-                    .onDelete(perform: deleteItems)
+                    .onDelete(perform: { indexSet in
+                        deleteItems(at: indexSet)
+                    })
                 }
             }
             .navigationBarTitle("Conversations")
             .navigationBarItems(trailing: EditButton())
         }
     }
-}
-
-func deleteItems(at offsets: IndexSet) {
-    conversations.remove(atOffsets: offsets)
+    
+    func deleteItems(at offsets: IndexSet) {
+        conversations.remove(atOffsets: offsets)
+    }
 }
 
 struct ConversationsList_Previews: PreviewProvider {

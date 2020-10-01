@@ -23,14 +23,14 @@ struct MatchDetailView: View {
             MatchProfileView(profile: family.aidant)
                 .tabItem {
                     Text("Aidant")
-                    Image(systemName: "person.crop.circle.fill")
+                    Image(systemName: "circle.fill")
                         .foregroundColor(selection == 0 ? Color("appOrange") : .gray)
                 }
                 .tag(0)
             MatchProfileView(profile: family.aide)
                 .tabItem {
                     Text("Aide")
-                    Image(systemName: "person.crop.circle.fill")
+                    Image(systemName: "circle.fill")
                 }
                 .tag(1)
         }
