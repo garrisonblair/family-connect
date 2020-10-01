@@ -18,15 +18,19 @@ struct ContentView: View {
                     Image(systemName: "link")
                 }
                 .tag(0)
+            Text("Profil")
+                .tabItem {
+                    Text("Profils")
+                    Image(systemName: "person.2.fill")
+                }
+                .tag(1)
             ChatView(conversation: conversation)
                 .tabItem {
                     Text("Conversations")
                     Image(systemName: "bubble.left.fill")
                 }
-                .tag(1)
+                .tag(2)
         }
-//        .tabViewStyle(PageTabViewStyle())
-//        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
