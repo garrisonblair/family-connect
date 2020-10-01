@@ -18,7 +18,7 @@ struct MatchesView: View {
                 ScrollView {
                     LazyVStack(content: {
                         ForEach(0...matches.count-1, id: \.self) { count in
-                            NavigationLink(destination: MatchRow(family: matches[count])) {
+                            NavigationLink(destination: MatchDetailView(family: matches[count])) {
                                 MatchRow(family: matches[count])
                             }
                             Divider()

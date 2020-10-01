@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct MatchDetailView: View {
-    let match: Family
+    @State var selection = 0
+    let family: Family
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection:$selection) {
+            MatchProfileView(profile: family.aidant)
+                .tabItem {
+                    Text("Aidant")
+                    Image(systemName: "person.crop.circle.fill")
+                        .foregroundColor(selection == 0 ? Color("appOrange") : .gray)
+                }
+                .tag(0)
+            MatchProfileView(profile: family.aide)
+                .tabItem {
+                    Text("Aide")
+                    Image(systemName: "person.crop.circle.fill")
+                }
+                .tag(1)
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
 struct MatchDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchDetailView(match: families[0])
+        MatchDetailView(family: families[0])
     }
 }
