@@ -10,8 +10,6 @@ import SwiftUI
 struct MatchesView: View {
     let matches: [Family]
     
-    
-    
     var body: some View {
         VStack(alignment: .leading) {
             NavigationView {

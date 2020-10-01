@@ -17,9 +17,11 @@ struct ChatView: View {
             VStack {
                 ScrollView {
                     LazyVStack(content: {
-                        ForEach(0...conversation.messages.count-1, id: \.self) { count in
-                            MessageView(message: conversation.messages[count])
-                                .padding(.horizontal)
+                        if conversation.messages.count != 0 {
+                            ForEach(0...conversation.messages.count-1, id: \.self) { count in
+                                MessageView(message: conversation.messages[count])
+                                    .padding(.horizontal)
+                            }
                         }
                     })
                 }

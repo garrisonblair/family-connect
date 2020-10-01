@@ -9,7 +9,14 @@ import SwiftUI
 
 struct MatchDetailView: View {
     @State var selection = 0
+    @State var showMessageView: Bool = false
+    
     let family: Family
+    var title: String {
+        get {
+            return selection == 0 ? "Personne Aidante" : "Personne Aidée"
+        }
+    }
     
     var body: some View {
         TabView(selection:$selection) {
@@ -27,9 +34,35 @@ struct MatchDetailView: View {
                 }
                 .tag(1)
         }
+        .sheet(isPresented: $showMessageView, content: {
+            ChatView(conversation: getConversation(with: family.aidant))
+        })
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        .navigationBarTitle(title, displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.showMessageView.toggle()
+        }, label: {
+            Text("Contacter")
+        }))
     }
+}
+
+func getConversation(with profile: Profile) -> Conversation {
+    var conversation: Conversation?
+    for item in conversations {
+        if item.matchedProfile.id == profile.id {
+            conversation = item
+            print("EXISTS")
+            break
+        }
+    }
+    if conversation == nil {
+        conversation = Conversation(matchedProfile: profile, messages: [])
+        conversations.append(conversation!)
+        print("NEW")
+    }
+    return conversation!
 }
 
 struct MatchDetailView_Previews: PreviewProvider {

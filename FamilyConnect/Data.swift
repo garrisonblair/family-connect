@@ -52,3 +52,5 @@ var messages = [
 ]
 
 var conversation = Conversation(matchedProfile: profiles[0], messages: messages)
+
+var conversations = [conversation]
