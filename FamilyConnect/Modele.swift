@@ -19,8 +19,9 @@ struct Language {
 }
 
 struct Rating {
-    var commenter: Profile
+    var commenter: String
     var comment: String
+    var grade: Double
 }
 
 struct Profile: Identifiable {
@@ -34,7 +35,29 @@ struct Profile: Identifiable {
     var languages: [Language]
     var description: String
     var services: [Service]
-    var rating: Double
+    var ratings: [Rating]
+    var rating: Double {
+        get {
+            var total = 0.0
+            for item in ratings {
+                total += item.grade
+            }
+            return total / Double(ratings.count)
+        }
+    }
+    
+    init(firstName: String, lastName: String, imageName: String, city: String, birthDate: Date, age: Int, languages: [Language], description: String, services: [Service], ratings: [Rating]) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.imageName = imageName
+        self.city = city
+        self.birthDate = birthDate
+        self.age = age
+        self.languages = languages
+        self.description = description
+        self.services = services
+        self.ratings = ratings
+    }
 }
 
 struct Family: Identifiable {

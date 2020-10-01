@@ -28,6 +28,7 @@ struct RatingView: View {
             Image(systemName: rating > 3 + threshold ? "heart.fill" : "heart")
             Image(systemName: rating > 4 + threshold ? "heart.fill" : "heart")
         }
+        .padding(.vertical)
         .foregroundColor(Color("appOrange"))
     }
 }
