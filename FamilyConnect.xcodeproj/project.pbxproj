@@ -20,6 +20,7 @@
 		F0FAEDA62524CA2D00F7CCA2 /* MessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */; };
 		F0FAEDAB2524D27600F7CCA2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */; };
 		F0FAEDAE2524D80F00F7CCA2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */; };
+		F0FAEDB32525BE4000F7CCA2 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContentView.swift; sourceTree = "<group>"; };
 		F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */,
 				F0FAED7A25247B0600F7CCA2 /* ContentView.swift */,
+				F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */,
 				F0FAED942524808600F7CCA2 /* MatchesView.swift */,
 				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
@@ -180,6 +183,7 @@
 				F0FAEDAE2524D80F00F7CCA2 /* ChatView.swift in Sources */,
 				F0FAEDAB2524D27600F7CCA2 /* MessageView.swift in Sources */,
 				F0FAED8D25247C4C00F7CCA2 /* Modele.swift in Sources */,
+				F0FAEDB32525BE4000F7CCA2 /* MatchDetailView.swift in Sources */,
 				F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */,
 				F0FAEDA32524A63F00F7CCA2 /* ServiceIcon.swift in Sources */,
 				F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */,
