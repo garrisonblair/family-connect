@@ -22,6 +22,7 @@ struct EvaluationView: View {
         VStack {
             FamilyPortrait(family: family)
             GradeInput(grade: $grade)
+                .padding(.top)
             CommentInput(comment: $comment)
         }
         .navigationBarTitle("Evaluation")
@@ -56,23 +57,5 @@ struct EvaluationView_Previews: PreviewProvider {
         var body: some View {
             EvaluationView(showEvaluationView: $showEvaluationView, grade: $grade, comment: $comment, family: families[0])
         }
-    }
-}
-
-struct CommentInput: View {
-    @Binding var comment: String
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            Text("Commentaire:")
-                .font(.title)
-            TextEditor(text: $comment)
-                .cornerRadius(25)
-                .padding([.leading, .bottom, .trailing])
-        }
-        .background(Color("appBackground"))
-        .cornerRadius(50)
-        .padding(.top)
     }
 }
