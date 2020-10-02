@@ -45,7 +45,7 @@ var profiles = [
     Profile(firstName: "Martine", lastName: "Davis", imageName: "profile5", city: "Paris", birthDate: Date(), age: 77, languages: [french], description: "Je cherche simplement quelqu'un avec qui discuter, se balader, raconter mes histoires", services: [walk, social], ratings: [rating5, rating6]),
     Profile(firstName: "Marc", lastName: "Ramin", imageName: "profile6", city: "Paris", birthDate: Date(), age: 67, languages: [french], description: "A besoin de quelqu'un qui pourrait me conduire et m'accompagner jusqu'au marché, et de temps a autres me connecter avec ma famille par facetime", services: [walk, social, printer, car], ratings: [rating5, rating4, rating1star]),
     Profile(firstName: "Louis", lastName: "Robert", imageName: "profile7", city: "Paris", birthDate: Date(), age: 76, languages: [french], description: "Je cherche simplement quelqu'un avec qui discuter, se balader, raconter mes histoires", services: [walk, clean, shop, printer], ratings: [rating4, rating6]),
-    Profile(firstName: "Jeanne", lastName: "Dubois", imageName: "profile6", city: "Paris", birthDate: Date(), age: 81, languages: [french], description: "A besoin de quelqu'un qui pourrait me conduire et m'accompagner jusqu'au marché, et de temps a autres me connecter avec ma famille par facetime", services: [walk, shop, car], ratings: [rating4, rating5, rating6])
+    Profile(firstName: "Jeanne", lastName: "Dubois", imageName: "profile8", city: "Paris", birthDate: Date(), age: 81, languages: [french], description: "A besoin de quelqu'un qui pourrait me conduire et m'accompagner jusqu'au marché, et de temps a autres me connecter avec ma famille par facetime", services: [walk, shop, car], ratings: [])
 ]
 
 var families = [

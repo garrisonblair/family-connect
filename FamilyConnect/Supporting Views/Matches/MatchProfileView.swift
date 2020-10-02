@@ -27,13 +27,17 @@ struct MatchProfileView: View {
                         .padding(.top)
                     Divider()
                         .background(Color("appBackground"))
-                    Text("Commentaires")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    ForEach(0...profile.ratings.count-1, id: \.self) { count in
-                        RatingCommentRow(rating: profile.ratings[count])
-                            .framedStyle()
-                            .padding(.top)
+                    if profile.ratings.count > 0 {
+                        Text("Commentaires")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        ForEach(0...profile.ratings.count-1, id: \.self) { count in
+                            if profile.ratings[count].comment != "" {
+                                RatingCommentRow(rating: profile.ratings[count])
+                                    .framedStyle()
+                                    .padding(.top)
+                            }
+                        }
                     }
                 })
             }
@@ -48,7 +52,7 @@ extension View {
             .padding(.all)
             .background(color)
             .cornerRadius(20.0)
-
+        
     }
 }
 
