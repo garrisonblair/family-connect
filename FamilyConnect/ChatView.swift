@@ -11,6 +11,9 @@ struct ChatView: View {
     @State var typingMessage: String = ""
     @State var conversation: Conversation
     @State var showEvaluationView: Bool = false
+    @State var grade: Int = 0
+    @State var comment: String = ""
+    @Binding var showMessageView: Bool
     
     var body: some View {
         ZStack {
@@ -46,13 +49,15 @@ struct ChatView: View {
             }
         }
         .sheet(isPresented: $showEvaluationView, content: {
-            Text("Evaluation")
+            NavigationView {
+                EvaluationView(showEvaluationView: $showEvaluationView, grade: $grade, comment: $comment, family: conversation.matchedFamily)
+            }
         })
-        .navigationBarTitle("\(conversation.matchedProfile.firstName) \(conversation.matchedProfile.lastName)", displayMode: .inline)
+        .navigationBarTitle("\(conversation.matchedFamily.aidant.firstName) \(conversation.matchedFamily.aidant.lastName)", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
-            self.showEvaluationView.toggle()
+            showMessageView ? self.showMessageView.toggle() : self.showEvaluationView.toggle()
         }, label: {
-            Text("Evaluer")
+            showMessageView ? Text("Done").foregroundColor(Color("appOrange")) : Text("Evaluer").foregroundColor(Color("appOrange"))
         }))
     }
 }
@@ -65,6 +70,14 @@ extension UIApplication {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(conversation: conversation)
+        PreviewWrapper()
+    }
+    
+    struct PreviewWrapper: View {
+        @State(initialValue: false) var showMessageView: Bool
+        
+        var body: some View {
+            ChatView(conversation: conversations[0], showMessageView: $showMessageView)
+        }
     }
 }

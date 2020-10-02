@@ -35,19 +35,9 @@ struct MatchDetailView: View {
                 .tag(1)
         }
         .sheet(isPresented: $showMessageView, content: {
-            HStack{
-                Text("\(family.aidant.firstName) \(family.aidant.lastName)")
-                    .font(.title2)
-                Spacer()
-                Button(action: {
-                    self.showMessageView.toggle()
-                }, label: {
-                    Text("Done")
-                })
+            NavigationView {
+                ChatView(conversation: getConversation(with: family), showMessageView: $showMessageView)
             }
-            .padding()
-            .background(Color.white)
-            ChatView(conversation: getConversation(with: family.aidant))
         })
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -61,16 +51,16 @@ struct MatchDetailView: View {
     }
 }
 
-func getConversation(with profile: Profile) -> Conversation {
+func getConversation(with family: Family) -> Conversation {
     var conversation: Conversation?
     for item in conversations {
-        if item.matchedProfile.id == profile.id {
+        if item.matchedFamily.aidant.id == family.aidant.id {
             conversation = item
             break
         }
     }
     if conversation == nil {
-        conversation = Conversation(matchedProfile: profile, messages: [])
+        conversation = Conversation(matchedFamily: family, messages: [])
         conversations.append(conversation!)
     }
     return conversation!
