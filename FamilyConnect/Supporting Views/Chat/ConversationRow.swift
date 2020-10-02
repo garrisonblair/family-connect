@@ -12,9 +12,9 @@ struct ConversationRow: View {
     
     var body: some View {
         HStack {
-            ProfileImage(imageName: conversation.matchedProfile.imageName, size: 75)
+            ProfileImage(imageName: conversation.matchedFamily.aidant.imageName, size: 75)
             VStack(alignment: .leading) {
-                Text(conversation.matchedProfile.firstName + " " + conversation.matchedProfile.lastName)
+                Text(conversation.matchedFamily.aidant.firstName + " " + conversation.matchedFamily.aidant.lastName)
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(Color("appOrange"))

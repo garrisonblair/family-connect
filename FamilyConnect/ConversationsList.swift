@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConversationsList: View {
     @State var conversations: [Conversation]
+    @State var showMessageView: Bool = false
     
     var body: some View {
         NavigationView {
@@ -16,7 +17,7 @@ struct ConversationsList: View {
                 if !conversations.isEmpty {
                     ForEach(0...conversations.count-1, id: \.self) { count in
                         NavigationLink(
-                            destination: ChatView(conversation: conversations[count]),
+                            destination: ChatView(conversation: conversations[count], showMessageView: $showMessageView),
                             label: {
                                 ConversationRow(conversation: conversations[count])
                             })
