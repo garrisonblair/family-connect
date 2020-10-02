@@ -26,8 +26,8 @@ struct MatchProfileView: View {
                         .framedStyle()
                         .padding(.top)
                     Divider()
-                        .background(/*@START_MENU_TOKEN@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
-                    Text("Retours")
+                        .background(Color("appBackground"))
+                    Text("Commentaires")
                         .font(.title)
                         .fontWeight(.bold)
                     ForEach(0...profile.ratings.count-1, id: \.self) { count in
