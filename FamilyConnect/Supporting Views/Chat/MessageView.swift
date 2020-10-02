@@ -24,6 +24,6 @@ struct MessageView: View {
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(message: messages[2])
+        MessageView(message: messages1[2])
     }
 }
