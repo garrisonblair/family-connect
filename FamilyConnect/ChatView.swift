@@ -14,6 +14,7 @@ struct ChatView: View {
     @State var grade: Int = 0
     @State var comment: String = ""
     @Binding var showMessageView: Bool
+    @State var showEvaluation: Bool = true
     
     var body: some View {
         ZStack {
@@ -55,9 +56,18 @@ struct ChatView: View {
         })
         .navigationBarTitle("\(conversation.matchedFamily.aidant.firstName) \(conversation.matchedFamily.aidant.lastName)", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
-            showMessageView ? self.showMessageView.toggle() : self.showEvaluationView.toggle()
+            if showMessageView {
+                self.showEvaluation = false
+                self.showMessageView.toggle()
+            } else if (!showMessageView && showEvaluation) {
+                self.showEvaluationView.toggle()
+            }
         }, label: {
-            showMessageView ? Text("Done").foregroundColor(Color("appOrange")) : Text("Evaluer").foregroundColor(Color("appOrange"))
+            if showMessageView {
+                Text("Done").foregroundColor(Color("appOrange"))
+            } else if (!showMessageView && showEvaluation) {
+                Text("Evaluer").foregroundColor(Color("appOrange"))
+            }
         }))
     }
 }
