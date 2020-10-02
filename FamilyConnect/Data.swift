@@ -51,6 +51,6 @@ var messages = [
     Message(sender: profiles[0], timestamp: Date(), message: "Le 26/09/2020 à 14:38, ce correspondant a cherché à vous joindre 1 fois sans laisser de message.Le 26/09/2020 à 14:38, ce correspondant a cherché à vous joindre 1 fois sans laisser de message.Le 26/09/2020 à 14:38, ce correspondant a cherché à vous joindre 1 fois sans laisser de message.")
 ]
 
-var conversation = Conversation(matchedProfile: profiles[0], messages: messages)
+var conversation = Conversation(matchedFamily: families[0], messages: messages)
 
 var conversations = [conversation]

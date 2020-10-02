@@ -76,6 +76,6 @@ struct Message: Identifiable {
 
 struct Conversation: Identifiable {
     var id = UUID()
-    var matchedProfile: Profile
+    var matchedFamily: Family
     var messages: [Message]
 }
