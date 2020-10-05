@@ -51,7 +51,7 @@ var profiles = [
 var families = [
     Family(familyName: "Davis", aide: profiles[4], aidant: profiles[0]),
     Family(familyName: "Ramin", aide: profiles[5], aidant: profiles[1]),
-    Family(familyName: "Mason-Robert", aide: profiles[6], aidant: profiles[2]),
+    Family(familyName: "Mason", aide: profiles[6], aidant: profiles[2]),
     Family(familyName: "Dubois", aide: profiles[7], aidant: profiles[3])
 ]
 
