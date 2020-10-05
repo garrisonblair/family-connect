@@ -1,10 +1,3 @@
-//
-//  MatchDetailView.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-10-01.
-//
-
 import SwiftUI
 
 struct MatchDetailView: View {
@@ -15,7 +8,7 @@ struct MatchDetailView: View {
             if selection == 0 {
                 return 175.0
             } else {
-                return 50.0
+                return 75.0
             }
         }
     }

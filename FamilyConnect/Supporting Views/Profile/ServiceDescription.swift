@@ -21,7 +21,7 @@ struct ServiceDescription: View {
             .padding(.horizontal, 30.0)
             if count != services.count - 1 {
                 Divider()
-                    .background(/*@START_MENU_TOKEN@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
+                    .background(Color("appBackground"))
             }
         }
     }

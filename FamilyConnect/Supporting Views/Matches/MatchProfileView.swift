@@ -1,10 +1,3 @@
-//
-//  MatchProfileView.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-10-01.
-//
-
 import SwiftUI
 
 struct MatchProfileView: View {

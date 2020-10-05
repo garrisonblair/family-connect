@@ -12,27 +12,29 @@ struct EvaluationView: View {
     }
     
     var body: some View {
-        VStack {
-            FamilyPortrait(family: family)
-            GradeInput(grade: $grade)
-            CommentInput(comment: $comment)
+        ScrollView {
+            VStack {
+                FamilyPortrait(family: family)
+                GradeInput(grade: $grade)
+                CommentInput(comment: $comment)
+            }
+            .navigationBarTitle("Evaluation")
+            .navigationBarItems(leading: Button(action: {
+                self.grade = 0
+                self.comment = ""
+                self.showEvaluationView.toggle()
+            }, label: {
+                Text("Annuler")
+                    .foregroundColor(Color("appOrange"))
+            }), trailing: Button(action: {
+                saveEvaluation(grade: self.grade, comment: self.comment)
+                self.showEvaluationView.toggle()
+            }, label: {
+                Text("Confirmer")
+                    .foregroundColor(Color("appOrange"))
+            }))
+            .padding()
         }
-        .navigationBarTitle("Evaluation")
-        .navigationBarItems(leading: Button(action: {
-            self.grade = 0
-            self.comment = ""
-            self.showEvaluationView.toggle()
-        }, label: {
-            Text("Annuler")
-                .foregroundColor(Color("appOrange"))
-        }), trailing: Button(action: {
-            saveEvaluation(grade: self.grade, comment: self.comment)
-            self.showEvaluationView.toggle()
-        }, label: {
-            Text("Confirmer")
-                .foregroundColor(Color("appOrange"))
-        }))
-        .padding()
     }
 }
 

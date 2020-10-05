@@ -14,9 +14,11 @@ struct ProfileInformation: View {
         VStack {
             HStack {
                 Text(profile.firstName)
+                    .font(.title)
                 Text(profile.lastName)
+                    .font(.title)
             }
-            Text("\(profile.age)")
+            Text("\(profile.age) ans")
             Text(profile.city)
             LanguageDescription(languages: profile.languages)
         }
