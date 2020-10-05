@@ -18,7 +18,7 @@ struct MatchProfileView: View {
                     Divider()
                         .background(Color("appBackground"))
                     if profile.ratings.count > 0 {
-                        Text("Commentaires")
+                        Text("Les avis")
                             .font(.title)
                             .fontWeight(.bold)
                         ForEach(0...profile.ratings.count-1, id: \.self) { count in

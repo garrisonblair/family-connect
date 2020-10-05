@@ -25,7 +25,7 @@ struct MatchDetailView: View {
     let family: Family
     var title: String {
         get {
-            return selection == 0 ? "Personne Aidante" : "Personne Aidée"
+            return selection == 0 ? "L'Aidant(e)" : "L'Aidé(e)"
         }
     }
     
@@ -49,14 +49,14 @@ struct MatchDetailView: View {
             TabView(selection:$selection) {
                 MatchProfileView(profile: family.aidant)
                     .tabItem {
-                        Text("Aidant")
+                        Text("L'Aidant(e)")
                         Image(systemName: "circle.fill")
                             .foregroundColor(selection == 0 ? Color("appOrange") : .gray)
                     }
                     .tag(0)
                 MatchProfileView(profile: family.aide)
                     .tabItem {
-                        Text("Aide")
+                        Text("L'Aidé(e)")
                         Image(systemName: "circle.fill")
                     }
                     .tag(1)
