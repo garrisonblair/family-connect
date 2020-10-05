@@ -1,10 +1,3 @@
-//
-//  FamilyPortrait.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-10-02.
-//
-
 import SwiftUI
 
 struct FamilyPortrait: View {
@@ -14,13 +7,13 @@ struct FamilyPortrait: View {
         VStack {
             HStack {
                 VStack {
-                    ProfileImage(imageName: family.aidant.imageName)
+                    ProfileImage(imageName: family.aidant.imageName, size: 150)
                     Text(family.aidant.firstName)
                         .font(.headline)
                 }
                 Spacer()
                 VStack {
-                    ProfileImage(imageName: family.aide.imageName)
+                    ProfileImage(imageName: family.aide.imageName, size: 150)
                     Text(family.aide.firstName)
                         .font(.headline)
                 }
@@ -29,7 +22,6 @@ struct FamilyPortrait: View {
                 .font(.largeTitle)
         }
         .padding(.all)
-        .background(Color("appBackground"))
         .cornerRadius(50)
     }
 }

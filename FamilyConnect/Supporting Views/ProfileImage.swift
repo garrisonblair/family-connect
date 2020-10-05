@@ -14,7 +14,7 @@ struct ProfileImage: View {
         size / 4
     }
     var stroke: CGFloat {
-        size / 35
+        size / 50
     }
     
     init(imageName: String) {
