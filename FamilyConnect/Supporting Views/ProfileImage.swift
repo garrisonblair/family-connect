@@ -32,7 +32,6 @@ struct ProfileImage: View {
             .aspectRatio(contentMode: .fill)
             .frame(width: size, height: size)
             .clipShape(RoundedRectangle(cornerRadius: radius))
-            .shadow(radius: 10)
             .overlay(RoundedRectangle(cornerRadius: radius)
             .stroke(Color("appOrange"), lineWidth: stroke))
     }

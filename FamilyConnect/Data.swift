@@ -25,7 +25,7 @@ var rating1 = Rating(commenter: "Frank", comment: "Tres gentil, attentionné. Ai
 var rating2 = Rating(commenter: "Henri", comment: "Aide avec les courses 2 fois par semaine mais reste un peu froid et réservé.", grade: 3.0)
 var rating3 = Rating(commenter: "Juliette", comment: "S'occupe bien de ma grandmere, l'aide avec les courses et le ménage au moins une fois par semaine", grade: 4.0)
 var rating4 = Rating(commenter: "Patrick", comment: "Tres gentil, attentionné. Aide ma mere avec ses courses et sa marche toutes les semaines", grade: 5.0)
-var rating5 = Rating(commenter: "Phillipe", comment: "Tres gentille personne, a toujours des histoires passionnantes.", grade: 4.0)
+var rating5 = Rating(commenter: "Phillipe", comment: "Tres gentille personne, a toujours des histoires passionnantes. Cuisine tres bien!", grade: 4.0)
 var rating6 = Rating(commenter: "Juliette", comment: "Adorable! A ce jour je n'ai jamais reussi a gagner au cartes quand on joue ensemble", grade: 4.0)
 
 var rating1star = Rating(commenter: "David", comment: "", grade: 1.0)

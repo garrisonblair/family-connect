@@ -15,7 +15,6 @@ struct EvaluationView: View {
         VStack {
             FamilyPortrait(family: family)
             GradeInput(grade: $grade)
-                .padding(.top)
             CommentInput(comment: $comment)
         }
         .navigationBarTitle("Evaluation")

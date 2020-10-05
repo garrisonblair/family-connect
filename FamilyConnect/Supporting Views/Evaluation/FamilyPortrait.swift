@@ -18,6 +18,7 @@ struct FamilyPortrait: View {
                         .font(.headline)
                 }
             }
+            .padding(.bottom, 3.0)
             Text("Famille \(family.familyName)")
                 .font(.largeTitle)
         }

@@ -30,7 +30,6 @@ struct ServiceIcon: View {
                     .background(unwrappedService.iconColor)
                     .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
                     .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                    .shadow(radius: 10)
             } else {
                 Image(systemName: car.iconName)
                     .resizable()
