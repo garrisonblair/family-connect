@@ -14,23 +14,24 @@ struct ContentView: View {
         TabView(selection:$selection) {
             MatchesView(matches: families)
                 .tabItem {
-                    Text("Matches")
+                    Text("Matchs")
                     Image(systemName: "link")
                 }
                 .tag(0)
-            Text("Profil")
+            Text("Profils")
                 .tabItem {
                     Text("Profils")
                     Image(systemName: "person.2.fill")
                 }
                 .tag(1)
-            ChatView(conversation: conversation)
+            ConversationsList(conversations: conversations)
                 .tabItem {
                     Text("Conversations")
                     Image(systemName: "bubble.left.fill")
                 }
                 .tag(2)
         }
+        .accentColor(Color("appOrange"))
     }
 }
 

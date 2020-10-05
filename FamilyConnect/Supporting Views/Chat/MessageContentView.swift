@@ -35,6 +35,6 @@ func isSameUser(_ profile1: Profile, and profile2: Profile) -> Bool {
 
 struct MessageContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageContentView(message: messages[1])
+        MessageContentView(message: messages1[1])
     }
 }

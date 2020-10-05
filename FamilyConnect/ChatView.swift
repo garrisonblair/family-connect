@@ -10,6 +10,11 @@ import SwiftUI
 struct ChatView: View {
     @State var typingMessage: String = ""
     @State var conversation: Conversation
+    @State var showEvaluationView: Bool = false
+    @State var grade: Int = 0
+    @State var comment: String = ""
+    @Binding var showMessageView: Bool
+    @State var showEvaluation: Bool = true
     
     var body: some View {
         ZStack {
@@ -17,9 +22,11 @@ struct ChatView: View {
             VStack {
                 ScrollView {
                     LazyVStack(content: {
-                        ForEach(0...conversation.messages.count-1, id: \.self) { count in
-                            MessageView(message: conversation.messages[count])
-                                .padding(.horizontal)
+                        if conversation.messages.count != 0 {
+                            ForEach(0...conversation.messages.count-1, id: \.self) { count in
+                                MessageView(message: conversation.messages[count])
+                                    .padding(.horizontal)
+                            }
                         }
                     })
                 }
@@ -42,6 +49,26 @@ struct ChatView: View {
                 .frame(minHeight: CGFloat(50)).padding()
             }
         }
+        .sheet(isPresented: $showEvaluationView, content: {
+            NavigationView {
+                EvaluationView(showEvaluationView: $showEvaluationView, grade: $grade, comment: $comment, family: conversation.matchedFamily)
+            }
+        })
+        .navigationBarTitle("\(conversation.matchedFamily.aidant.firstName) \(conversation.matchedFamily.aidant.lastName)", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            if showMessageView {
+                self.showEvaluation = false
+                self.showMessageView.toggle()
+            } else if (!showMessageView && showEvaluation) {
+                self.showEvaluationView.toggle()
+            }
+        }, label: {
+            if showMessageView {
+                Text("Done").foregroundColor(Color("appOrange"))
+            } else if (!showMessageView && showEvaluation) {
+                Text("Evaluer").foregroundColor(Color("appOrange"))
+            }
+        }))
     }
 }
 
@@ -53,6 +80,14 @@ extension UIApplication {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(conversation: conversation)
+        PreviewWrapper()
+    }
+    
+    struct PreviewWrapper: View {
+        @State(initialValue: false) var showMessageView: Bool
+        
+        var body: some View {
+            ChatView(conversation: conversations[0], showMessageView: $showMessageView)
+        }
     }
 }
