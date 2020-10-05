@@ -168,9 +168,9 @@
 		F0FAED9B25249CD900F7CCA2 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				F01060F02527152B00267FD3 /* Evaluation */,
-				F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */,
 				F0FAEDA22524A63E00F7CCA2 /* ServiceIcon.swift */,
+				F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */,
+				F01060F02527152B00267FD3 /* Evaluation */,
 				F0808CD92525CFBC00A1AB88 /* Profile */,
 				F0808CD82525CF9E00A1AB88 /* Matches */,
 				F0808CD72525CF8200A1AB88 /* Chat */,

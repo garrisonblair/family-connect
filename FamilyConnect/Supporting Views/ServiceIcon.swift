@@ -39,8 +39,8 @@ struct ServiceIcon: View {
                     .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
                     .opacity(0.0)
             }
-        }.frame(width: size, height: size)
-        
+        }
+        .frame(width: size, height: size)
     }
 }
 
