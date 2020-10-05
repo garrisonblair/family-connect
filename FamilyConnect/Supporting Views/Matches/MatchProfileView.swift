@@ -12,9 +12,6 @@ struct MatchProfileView: View {
     
     var body: some View {
         VStack {
-            ProfileImage(imageName: profile.imageName)
-                .padding(.top)
-            RatingView(rating: profile.rating)
             ScrollView {
                 LazyVStack(content: {
                     ProfileInformation(profile: profile)
