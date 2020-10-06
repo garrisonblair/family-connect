@@ -9,7 +9,7 @@ struct CommentInput: View {
             Text("Commentaire:")
                 .font(.title)
             TextEditor(text: $comment)
-                .frame(minHeight: 150)
+                .frame(minHeight: 150, idealHeight: 250)
                 .cornerRadius(25)
                 .padding([.leading, .bottom, .trailing])
         }

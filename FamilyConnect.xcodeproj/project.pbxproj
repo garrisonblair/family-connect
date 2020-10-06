@@ -19,6 +19,7 @@
 		F0B977742525DD2A00438727 /* RatingCommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B977732525DD2A00438727 /* RatingCommentRow.swift */; };
 		F0B9777F25260A7C00438727 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9777E25260A7C00438727 /* ConversationRow.swift */; };
 		F0B9778225260BAF00438727 /* ConversationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9778125260BAF00438727 /* ConversationsList.swift */; };
+		F0C030C9252C8DED0009E803 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C030C8252C8DED0009E803 /* FormView.swift */; };
 		F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */; };
 		F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7A25247B0600F7CCA2 /* ContentView.swift */; };
 		F0FAED7D25247B0800F7CCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		F0B977732525DD2A00438727 /* RatingCommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCommentRow.swift; sourceTree = "<group>"; };
 		F0B9777E25260A7C00438727 /* ConversationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRow.swift; sourceTree = "<group>"; };
 		F0B9778125260BAF00438727 /* ConversationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsList.swift; sourceTree = "<group>"; };
+		F0C030C8252C8DED0009E803 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = "../../../../../Downloads/Ecran ma Famille/FormView.swift"; sourceTree = "<group>"; };
 		F0FAED7525247B0600F7CCA2 /* FamilyConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyConnectApp.swift; sourceTree = "<group>"; };
 		F0FAED7A25247B0600F7CCA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
 				F01060ED2527124900267FD3 /* EvaluationView.swift */,
 				F0B9778125260BAF00438727 /* ConversationsList.swift */,
+				F0C030C8252C8DED0009E803 /* FormView.swift */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
 				F0FAED972524817A00F7CCA2 /* Data.swift */,
 				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C030C9252C8DED0009E803 /* FormView.swift in Sources */,
 				F0FAED952524808600F7CCA2 /* MatchesView.swift in Sources */,
 				F0808CDC2525D02B00A1AB88 /* LanguageDescription.swift in Sources */,
 				F0B9776F2525D5BE00438727 /* ProfileInformation.swift in Sources */,

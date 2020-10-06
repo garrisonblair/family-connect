@@ -18,7 +18,7 @@ struct ContentView: View {
                     Image(systemName: "link")
                 }
                 .tag(0)
-            Text("Profils")
+            FormView(profile: currentUser)
                 .tabItem {
                     Text("Profils")
                     Image(systemName: "person.2.fill")

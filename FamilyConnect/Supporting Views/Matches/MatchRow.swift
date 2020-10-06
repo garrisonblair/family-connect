@@ -9,6 +9,11 @@ import SwiftUI
 
 struct MatchRow: View {
     let family: Family
+    var services: [Service] {
+        get {
+            family.aidant.getServices()
+        }
+    }
     
     var body: some View {
         HStack {
@@ -17,14 +22,14 @@ struct MatchRow: View {
                 Text(family.familyName)
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/Color("appOrange")/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color("appOrange"))
                 HStack {
-                    family.aidant.services.count > 0 ? ServiceIcon(family.aidant.services[0]) : ServiceIcon()
-                    family.aidant.services.count > 1 ? ServiceIcon(family.aidant.services[1]) : ServiceIcon()
+                    services.count > 0 ? ServiceIcon(services[0]) : ServiceIcon()
+                    services.count > 1 ? ServiceIcon(services[1]) : ServiceIcon()
                 }
                 HStack {
-                    family.aidant.services.count > 2 ? ServiceIcon(family.aidant.services[2]) : ServiceIcon()
-                    family.aidant.services.count > 3 ? ServiceIcon(family.aidant.services[3]) : ServiceIcon()
+                    services.count > 2 ? ServiceIcon(services[2]) : ServiceIcon()
+                    services.count > 3 ? ServiceIcon(services[3]) : ServiceIcon()
                 }
             }
             .frame(minWidth: 0,
@@ -35,7 +40,6 @@ struct MatchRow: View {
                 .foregroundColor(Color("appOrange"))
         }
         .padding(.all)
-//        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("appBackground")/*@END_MENU_TOKEN@*/)
     }
 }
 

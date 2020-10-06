@@ -32,9 +32,9 @@ struct Profile: Identifiable {
     var city: String
     var birthDate: Date
     var age: Int
-    var languages: [Language]
+    var languages: [String: Language]
     var description: String
-    var services: [Service]
+    var services: [String: Service]
     var ratings: [Rating]
     var rating: Double {
         get {
@@ -46,7 +46,7 @@ struct Profile: Identifiable {
         }
     }
     
-    init(firstName: String, lastName: String, imageName: String, city: String, birthDate: Date, age: Int, languages: [Language], description: String, services: [Service], ratings: [Rating]) {
+    init(firstName: String, lastName: String, imageName: String, city: String, birthDate: Date, age: Int, languages: [String: Language], description: String, services: [String: Service], ratings: [Rating]) {
         self.firstName = firstName
         self.lastName = lastName
         self.imageName = imageName
@@ -57,6 +57,22 @@ struct Profile: Identifiable {
         self.description = description
         self.services = services
         self.ratings = ratings
+    }
+    
+    func getServices() -> [Service] {
+        var serviceArray:[Service] = []
+        for service in services {
+            serviceArray.append(service.value)
+        }
+        return serviceArray
+    }
+    
+    func getLanguages() -> [Language] {
+        var languageArray: [Language] = []
+        for language in languages {
+            languageArray.append(language.value)
+        }
+        return languageArray
     }
 }
 

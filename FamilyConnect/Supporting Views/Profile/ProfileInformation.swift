@@ -20,7 +20,7 @@ struct ProfileInformation: View {
             }
             Text("\(profile.age) ans")
             Text(profile.city)
-            LanguageDescription(languages: profile.languages)
+            LanguageDescription(languages: profile.getLanguages())
         }
     }
 }

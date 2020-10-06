@@ -12,8 +12,10 @@ struct ConversationRow: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(Color("appOrange"))
-                Text(conversation.messages.last?.message ?? "")
-                    .frame(maxWidth: 275, maxHeight: 75)
+                HStack {
+                    Text(conversation.messages.last?.message ?? "")
+                        .frame(maxWidth: 275, maxHeight: 75, alignment: .leading)
+                }
             }
         }
     }

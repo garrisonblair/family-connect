@@ -12,7 +12,7 @@ struct MatchProfileView: View {
                     ProfileInformation(profile: profile)
                         .framedStyle()
                         .padding(.bottom)
-                    ServiceDescription(services: profile.services)
+                    ServiceDescription(services: profile.getServices())
                     
                     AboutProfileView(firstName: profile.firstName, description: profile.description)
                         .framedStyle()
