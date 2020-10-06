@@ -51,7 +51,6 @@ struct MatchDetailView: View {
                     .tabItem {
                         Text("L'Aidant(e)")
                         Image(systemName: "circle.fill")
-                            .foregroundColor(selection == 0 ? Color("appOrange") : .gray)
                     }
                     .tag(0)
                 MatchProfileView(profile: family.aide)
