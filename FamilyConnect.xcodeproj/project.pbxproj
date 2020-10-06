@@ -136,15 +136,6 @@
 			path = ProfileForm;
 			sourceTree = "<group>";
 		};
-		F0C030DB252CC0920009E803 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				F0FAED972524817A00F7CCA2 /* Data.swift */,
-				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		F0C030DC252CC0C60009E803 /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +169,8 @@
 				F0FAED7A25247B0600F7CCA2 /* ContentView.swift */,
 				F0C030DC252CC0C60009E803 /* Main Views */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
-				F0C030DB252CC0920009E803 /* Data */,
+				F0FAED972524817A00F7CCA2 /* Data.swift */,
+				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
 				F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */,
 				F0FAED8125247B0800F7CCA2 /* Info.plist */,
 				F0FAED7E25247B0800F7CCA2 /* Preview Content */,

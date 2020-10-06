@@ -15,9 +15,8 @@ struct ProfileFormView: View {
     @State var dateDeNaissance: String = ""
     @State var about: String = ""
     
-    @State var isActive: Bool = true
-    @State var isActiveTwo: Bool = true
-    @State var isActiveThree: Bool = true
+    @State var isVehicle: Bool = false
+    @State var isService: Bool = false
     
     //Picker Ville
     @State var indexPickerOne = 0
@@ -72,8 +71,7 @@ struct ProfileFormView: View {
                                 Text(self.optionPicker[$0]).foregroundColor(.black)
                             }
                         }
-                        
-                        
+                        .navigationBarHidden(true)
                         VStack {
                             Picker(selection: $Langues, label:
                                     Text("Langues"), content: {
@@ -182,21 +180,22 @@ struct ProfileFormView: View {
                                         
                                     }
                             )}
+                            .navigationBarHidden(true)
                     }
                     
                     //Section VOS SERVICES
                     
                     Section(header: Text("Vos Services")) {
                         
-                        Toggle(isOn: $isActiveTwo) {
+                        Toggle(isOn: $isVehicle) {
                             Text("Véhicule")
                         }
                         .onAppear {
                             if profile.services["car"] != nil {
-                                self.isActiveTwo = true
+                                self.isVehicle = true
                             }
                         }
-                        .onChange(of: isActiveTwo, perform: { value in
+                        .onChange(of: isVehicle, perform: { value in
                             if value {
                                 self.profile.services["car"] = car
                             } else {
@@ -206,17 +205,17 @@ struct ProfileFormView: View {
                         .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                     }
                     
-                    Toggle(isOn: $isActiveThree) {
+                    Toggle(isOn: $isService) {
                         Text("Aide")
                     }
                     .onAppear {
                         if !profile.services.isEmpty {
-                            self.isActiveThree = true
+                            self.isService = true
                         }
                     }
                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                     
-                    if isActiveThree{
+                    if isService{
                         VStack {
                             Picker(selection: $Help, label:
                                     Text("Sélectionnez le type d'Aide")
@@ -325,6 +324,7 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                    }
                             )}
+                            .navigationBarHidden(true)
                     }
                     Section(header: Text("À propos de moi")) {
                         TextEditor(text: $about)
@@ -345,7 +345,6 @@ struct ProfileFormView: View {
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }
-        .padding(.bottom, 40.0)
     }
 }
 
