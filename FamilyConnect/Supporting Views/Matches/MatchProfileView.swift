@@ -40,8 +40,10 @@ struct MatchProfileView: View {
                                 .foregroundColor(Color("appOrange"))
                                 .padding()
                         })
+                        .padding(.bottom, 40.0)
                     } else {
                         Text("Il n'y a pas d'avis a ce moment")
+                            .padding(.bottom, 40.0)
                     }
                 })
             }

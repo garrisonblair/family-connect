@@ -18,8 +18,9 @@ var walk = Service(iconName: "figure.walk", iconColor: Color("iconBrown"), descr
 var french = Language(name: "Francais", image: "🇫🇷")
 var english = Language(name: "Anglais", image: "🇬🇧")
 var italian = Language(name: "Italien", image: "🇮🇹")
-var german = Language(name: "Allemand", image: "🇩🇪")
 var spanish = Language(name: "Espagnol", image: "🇪🇸")
+var arabic = Language(name: "Arabe", image: "")
+var chinese = Language(name: "Chinois", image: "🇨🇳")
 
 var rating1 = Rating(commenter: "Frank", comment: "Tres gentil, attentionné. Aide ma mere avec ses courses et sa marche toutes les semaines", grade: 5.0)
 var rating2 = Rating(commenter: "Henri", comment: "Aide avec les courses 2 fois par semaine mais reste un peu froid et réservé.", grade: 3.0)
@@ -58,7 +59,10 @@ var families = [
     Family(familyName: "Dupont", aide: profiles[9], aidant: profiles[8])
 ]
 
-var currentUser = Profile(firstName: "Garrison", lastName: "Blair", imageName: "", city: "Paris", birthDate: Date(), age: 24, languages: ["french": french], description: "", services: ["walk": walk, "clean": clean, "social": social], ratings: ratings)
+var currentUser = Profile(firstName: "Alex", lastName: "Torres", imageName: "currentUser", city: "", birthDate: Date(), age: 24, languages: [:], description: "", services: [:], ratings: [])
+var currentHelped = Profile(firstName: "Jeanne", lastName: "Torres", imageName: "currentHelped", city: "", birthDate: Date(), age: 76, languages: [:], description: "", services: [:], ratings: [])
+
+var currentFamily = Family(familyName: "Torres", aide: currentHelped, aidant: currentUser)
 
 var messages1 = [
     Message(sender: currentUser, timestamp: Date(), message: "Bonjour, j'apprecie beaucoup votre profil, je pense que nos familles pourraient s'entraider, ca vous tente?"),

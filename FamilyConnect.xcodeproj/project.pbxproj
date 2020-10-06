@@ -19,7 +19,8 @@
 		F0B977742525DD2A00438727 /* RatingCommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B977732525DD2A00438727 /* RatingCommentRow.swift */; };
 		F0B9777F25260A7C00438727 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9777E25260A7C00438727 /* ConversationRow.swift */; };
 		F0B9778225260BAF00438727 /* ConversationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9778125260BAF00438727 /* ConversationsList.swift */; };
-		F0C030C9252C8DED0009E803 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C030C8252C8DED0009E803 /* FormView.swift */; };
+		F0C030D3252CA6E90009E803 /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C030D2252CA6E90009E803 /* ProfileFormView.swift */; };
+		F0C030D7252CA7730009E803 /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C030D6252CA7730009E803 /* ProfilesView.swift */; };
 		F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */; };
 		F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FAED7A25247B0600F7CCA2 /* ContentView.swift */; };
 		F0FAED7D25247B0800F7CCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FAED7C25247B0800F7CCA2 /* Assets.xcassets */; };
@@ -50,7 +51,8 @@
 		F0B977732525DD2A00438727 /* RatingCommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCommentRow.swift; sourceTree = "<group>"; };
 		F0B9777E25260A7C00438727 /* ConversationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRow.swift; sourceTree = "<group>"; };
 		F0B9778125260BAF00438727 /* ConversationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsList.swift; sourceTree = "<group>"; };
-		F0C030C8252C8DED0009E803 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = "../../../../../Downloads/Ecran ma Famille/FormView.swift"; sourceTree = "<group>"; };
+		F0C030D2252CA6E90009E803 /* ProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
+		F0C030D6252CA7730009E803 /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
 		F0FAED7525247B0600F7CCA2 /* FamilyConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyConnectApp.swift; sourceTree = "<group>"; };
 		F0FAED7A25247B0600F7CCA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		F01060F02527152B00267FD3 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				F01060ED2527124900267FD3 /* EvaluationView.swift */,
 				F01060F12527154C00267FD3 /* FamilyPortrait.swift */,
 				F01060F52527185F00267FD3 /* GradeInput.swift */,
 				F01060F82527517900267FD3 /* CommentInput.swift */,
@@ -94,6 +97,7 @@
 		F0808CD72525CF8200A1AB88 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
 				F0FAEDA52524CA2D00F7CCA2 /* MessageContentView.swift */,
 				F0FAEDAA2524D27600F7CCA2 /* MessageView.swift */,
 				F0B9777E25260A7C00438727 /* ConversationRow.swift */,
@@ -104,6 +108,7 @@
 		F0808CD82525CF9E00A1AB88 /* Matches */ = {
 			isa = PBXGroup;
 			children = (
+				F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */,
 				F0FAED9C25249D1700F7CCA2 /* MatchRow.swift */,
 				F0FAEDB52525BEF800F7CCA2 /* MatchProfileView.swift */,
 			);
@@ -121,6 +126,14 @@
 				F0B977732525DD2A00438727 /* RatingCommentRow.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F0C030D1252CA6D80009E803 /* ProfileForm */ = {
+			isa = PBXGroup;
+			children = (
+				F0C030D2252CA6E90009E803 /* ProfileFormView.swift */,
+			);
+			path = ProfileForm;
 			sourceTree = "<group>";
 		};
 		F0FAED6C25247B0600F7CCA2 = {
@@ -144,12 +157,9 @@
 			children = (
 				F0FAED7825247B0600F7CCA2 /* FamilyConnectApp.swift */,
 				F0FAED7A25247B0600F7CCA2 /* ContentView.swift */,
-				F0FAEDB22525BE4000F7CCA2 /* MatchDetailView.swift */,
 				F0FAED942524808600F7CCA2 /* MatchesView.swift */,
-				F0FAEDAD2524D80F00F7CCA2 /* ChatView.swift */,
-				F01060ED2527124900267FD3 /* EvaluationView.swift */,
+				F0C030D6252CA7730009E803 /* ProfilesView.swift */,
 				F0B9778125260BAF00438727 /* ConversationsList.swift */,
-				F0C030C8252C8DED0009E803 /* FormView.swift */,
 				F0FAED9B25249CD900F7CCA2 /* Supporting Views */,
 				F0FAED972524817A00F7CCA2 /* Data.swift */,
 				F0FAED8C25247C4C00F7CCA2 /* Modele.swift */,
@@ -173,6 +183,7 @@
 			children = (
 				F0FAEDA22524A63E00F7CCA2 /* ServiceIcon.swift */,
 				F0FAED9F2524A01F00F7CCA2 /* ProfileImage.swift */,
+				F0C030D1252CA6D80009E803 /* ProfileForm */,
 				F01060F02527152B00267FD3 /* Evaluation */,
 				F0808CD92525CFBC00A1AB88 /* Profile */,
 				F0808CD82525CF9E00A1AB88 /* Matches */,
@@ -250,11 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C030C9252C8DED0009E803 /* FormView.swift in Sources */,
 				F0FAED952524808600F7CCA2 /* MatchesView.swift in Sources */,
 				F0808CDC2525D02B00A1AB88 /* LanguageDescription.swift in Sources */,
 				F0B9776F2525D5BE00438727 /* ProfileInformation.swift in Sources */,
 				F0B9777F25260A7C00438727 /* ConversationRow.swift in Sources */,
+				F0C030D3252CA6E90009E803 /* ProfileFormView.swift in Sources */,
 				F0FAED982524817A00F7CCA2 /* Data.swift in Sources */,
 				F01060F22527154C00267FD3 /* FamilyPortrait.swift in Sources */,
 				F0B9778225260BAF00438727 /* ConversationsList.swift in Sources */,
@@ -272,6 +283,7 @@
 				F0FAEDB32525BE4000F7CCA2 /* MatchDetailView.swift in Sources */,
 				F0FAED7B25247B0600F7CCA2 /* ContentView.swift in Sources */,
 				F0FAEDA32524A63F00F7CCA2 /* ServiceIcon.swift in Sources */,
+				F0C030D7252CA7730009E803 /* ProfilesView.swift in Sources */,
 				F0FAED7925247B0600F7CCA2 /* FamilyConnectApp.swift in Sources */,
 				F0FAEDA62524CA2D00F7CCA2 /* MessageContentView.swift in Sources */,
 				F0FAEDB62525BEF800F7CCA2 /* MatchProfileView.swift in Sources */,
