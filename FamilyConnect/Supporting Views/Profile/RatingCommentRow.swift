@@ -5,7 +5,7 @@ struct RatingCommentRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Commentaire de " + rating.commenter + ":")
+            Text("Commentaire de " + rating.commenter + " :")
                 .font(.headline)
                 .padding(.bottom)
             Text(rating.comment)

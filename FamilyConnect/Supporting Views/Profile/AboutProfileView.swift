@@ -6,7 +6,7 @@ struct AboutProfileView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("A propos de " + firstName + ":")
+            Text("A propos de " + firstName + " :")
                 .font(.headline)
                 .padding(.bottom)
             Text(description)

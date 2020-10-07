@@ -4,6 +4,7 @@ struct MatchProfileView: View {
     @State var showComments: Bool = false
     
     let profile: Profile
+    let isAidant: Bool
     
     var body: some View {
         VStack {
@@ -12,6 +13,10 @@ struct MatchProfileView: View {
                     ProfileInformation(profile: profile)
                         .framedStyle()
                         .padding(.bottom)
+                    
+                    Text(isAidant ? "Je propose :" : "Je recherche :")
+                        .foregroundColor(.gray)
+                    
                     ServiceDescription(services: profile.getServices())
                     
                     AboutProfileView(firstName: profile.firstName, description: profile.description)
@@ -91,6 +96,6 @@ extension View {
 
 struct MatchProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchProfileView(profile: profiles[0])
+        MatchProfileView(profile: profiles[0], isAidant: true)
     }
 }

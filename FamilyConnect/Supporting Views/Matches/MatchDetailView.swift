@@ -47,13 +47,13 @@ struct MatchDetailView: View {
             }
             RatingView(rating: selection == 0 ? family.aidant.rating : family.aide.rating)
             TabView(selection:$selection) {
-                MatchProfileView(profile: family.aidant)
+                MatchProfileView(profile: family.aidant, isAidant: true)
                     .tabItem {
                         Text("L'Aidant(e)")
                         Image(systemName: "circle.fill")
                     }
                     .tag(0)
-                MatchProfileView(profile: family.aide)
+                MatchProfileView(profile: family.aide, isAidant: false)
                     .tabItem {
                         Text("L'Aidé(e)")
                         Image(systemName: "circle.fill")
