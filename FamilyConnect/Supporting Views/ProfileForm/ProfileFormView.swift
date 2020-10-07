@@ -70,8 +70,8 @@ struct ProfileFormView: View {
                             ForEach(0 ..< optionPicker.count){
                                 Text(self.optionPicker[$0]).foregroundColor(.black)
                             }
+                            .navigationBarHidden(true)
                         }
-                        .navigationBarHidden(true)
                         VStack {
                             Picker(selection: $Langues, label:
                                     Text("Langues"), content: {
@@ -177,7 +177,6 @@ struct ProfileFormView: View {
                                             }
                                         })
                                         .toggleStyle(SwitchToggleStyle(tint: Color.orange))
-                                        
                                     }
                             )}
                             .navigationBarHidden(true)
@@ -215,7 +214,7 @@ struct ProfileFormView: View {
                     }
                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                     
-                    if isService{
+                    if isService {
                         VStack {
                             Picker(selection: $Help, label:
                                     Text("Sélectionnez le type d'Aide")
