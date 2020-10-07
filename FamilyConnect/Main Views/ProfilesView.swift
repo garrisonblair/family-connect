@@ -1,10 +1,3 @@
-//
-//  ProfilesView.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-10-06.
-//
-
 import SwiftUI
 
 struct ProfilesView: View {

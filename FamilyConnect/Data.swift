@@ -1,10 +1,3 @@
-//
-//  Data.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-09-30.
-//
-
 import SwiftUI
 
 var printer = Service(iconName: "printer", iconColor: Color("iconLightBlue"), description: "Aide Technologique")

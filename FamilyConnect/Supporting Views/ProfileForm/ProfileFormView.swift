@@ -1,10 +1,3 @@
-//
-//  FormView.swift
-//  Ecran ma Famille
-//
-//  Created by Hodah Massamba-Wa on 01/10/2020.
-//
-
 import SwiftUI
 
 struct ProfileFormView: View {

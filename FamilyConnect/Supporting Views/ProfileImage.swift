@@ -1,10 +1,3 @@
-//
-//  ProfileImage.swift
-//  FamilyConnect
-//
-//  Created by Garrison Blair on 2020-09-30.
-//
-
 import SwiftUI
 
 struct ProfileImage: View {
