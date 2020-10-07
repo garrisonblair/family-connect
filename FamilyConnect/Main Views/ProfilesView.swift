@@ -49,23 +49,22 @@ struct ProfilesView: View {
                         })
                 }
                 NavigationView {
-                    TabView(selection:$selection) {
+//                    TabView(selection:$selection) {
                         ProfileFormView(profile: family.aidant)
-                            .tabItem {
-                                Text("L'Aidant(e)")
-                                Image(systemName: "circle.fill")
-                            }
-                            .tag(0)
-                        ProfileFormView(profile: family.aide)
-                            .tabItem {
-                                Text("L'Aidé(e)")
-                                Image(systemName: "circle.fill")
-                            }
-                            .tag(1)
-                        
-                    }
-                    .tabViewStyle(PageTabViewStyle())
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+//                            .tabItem {
+//                                Text("L'Aidant(e)")
+//                                Image(systemName: "circle.fill")
+//                            }
+//                            .tag(0)
+//                        ProfileFormView(profile: family.aide)
+//                            .tabItem {
+//                                Text("L'Aidé(e)")
+//                                Image(systemName: "circle.fill")
+//                            }
+//                            .tag(1)
+//                    }
+//                    .tabViewStyle(PageTabViewStyle())
+//                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                 }
             }
         }
