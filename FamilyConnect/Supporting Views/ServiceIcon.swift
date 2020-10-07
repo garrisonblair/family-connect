@@ -19,6 +19,11 @@ struct ServiceIcon: View {
         self.service = service
     }
     
+    init(_ service: Service, size: CGFloat) {
+        self.size = size
+        self.service = service
+    }
+    
     var body: some View {
         ZStack {
             if let unwrappedService = service {

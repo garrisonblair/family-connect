@@ -221,7 +221,11 @@ struct ProfileFormView: View {
                                    , content: {
                                     
                                     Toggle(isOn: $isShopping) {
-                                        Text("Courses").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(shop, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Courses").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["shop"] != nil {
@@ -238,7 +242,11 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                     
                                     Toggle(isOn: $isWalk) {
-                                        Text("Marche").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(walk, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Marche").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["walk"] != nil {
@@ -255,7 +263,11 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                     
                                     Toggle(isOn: $isStudy) {
-                                        Text("Etudes").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(study, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Etudes").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["study"] != nil {
@@ -272,7 +284,11 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                     
                                     Toggle(isOn: $isCleaning) {
-                                        Text("Maison").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(clean, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Maison").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["clean"] != nil {
@@ -289,7 +305,11 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                     
                                     Toggle(isOn: $isSocial) {
-                                        Text("Contact social").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(social, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Contact social").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["social"] != nil {
@@ -306,7 +326,11 @@ struct ProfileFormView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                                     
                                     Toggle(isOn: $isTech) {
-                                        Text("Technologie").foregroundColor(.black)
+                                        HStack {
+                                            ServiceIcon(printer, size: 50.0)
+                                                .padding(.trailing)
+                                            Text("Technologie").foregroundColor(.black)
+                                        }
                                     }
                                     .onAppear {
                                         if profile.services["printer"] != nil {
