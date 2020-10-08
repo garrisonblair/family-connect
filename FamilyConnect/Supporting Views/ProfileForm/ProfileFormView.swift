@@ -5,7 +5,14 @@ struct ProfileFormView: View {
     
     @State var firstName: String = ""
     @State var lastName: String = ""
-    @State var dateDeNaissance: String = ""
+    @State var selectedDate = Date()
+
+    var dateClosedRange: ClosedRange<Date> {
+        let min = Calendar.current.date(byAdding: .year, value: -99, to: Date())!
+        let max = Date()
+        return min...max
+    }
+    
     @State var about: String = ""
     
     @State var isVehicle: Bool = false
@@ -56,7 +63,14 @@ struct ProfileFormView: View {
                             .onChange(of: lastName, perform: { value in
                                 self.profile.lastName = value
                             })
-                        TextField("Date de naissance", text: $dateDeNaissance)
+                        
+                        DatePicker(selection: $selectedDate, in: dateClosedRange, displayedComponents: .date, label: { Text("Date de naissance") })
+                            .onAppear {
+                                self.selectedDate = profile.birthDate
+                            }
+                            .onChange(of: selectedDate, perform: { value in
+                                self.profile.birthDate = value
+                            })
                         
                         Picker(selection: $indexPickerOne, label:
                                 Text("Ville")) {
