@@ -52,7 +52,7 @@ var families = [
     Family(familyName: "Dupont", aide: profiles[9], aidant: profiles[8])
 ]
 
-var currentUser = Profile(firstName: "Alex", lastName: "Torres", imageName: "currentUser", city: "", birthDate: Date(), age: 24, languages: [:], description: "", services: [:], ratings: [])
+var currentUser = Profile(firstName: "Alex", lastName: "Torres", imageName: "currentUser", city: "", birthDate: Date(), age: 24, languages: ["french": french], description: "", services: ["clean": clean, "walk": walk, "social": social], ratings: [])
 var currentHelped = Profile(firstName: "Jeanne", lastName: "Torres", imageName: "currentHelped", city: "", birthDate: Date(), age: 76, languages: [:], description: "", services: [:], ratings: [])
 
 var currentFamily = Family(familyName: "Torres", aide: currentHelped, aidant: currentUser)
@@ -70,11 +70,8 @@ var messages2 = [
     Message(sender: profiles[1], timestamp: Date(), message: "Merci beaucoup pour votre réponse. Excellente journée")
 ]
 var messages3 = [
-    Message(sender: profiles[2], timestamp: Date(), message: "Bonjour, j'espère que vous allez bien. J'ai regardé votre profil et je pense que je peux aider votre grand-mère pour lui faire des courses et si elle le souhaite aller se dégourdir les jambes"),
-    Message(sender: currentUser, timestamp: Date(), message: "Bonjour, Merci pour votre proposition! J'en serais ravie. Est ce que votre père aime aller au cinéma?"),
-    Message(sender: profiles[2], timestamp: Date(), message: "Oui il adore ça!"),
-    Message(sender: currentUser, timestamp: Date(), message: "Je vous propose de nous appeler par Facetime si cela vous convient. Ce soir 18h?"),
-    Message(sender: profiles[2], timestamp: Date(), message: "Parfait! voici mon Numéro. Au plaisir")
+    Message(sender: currentUser, timestamp: Date(), message: "Bonjour, voulez vous qu'on s'entraide?"),
+    Message(sender: profiles[2], timestamp: Date(), message: "Oui ça serait super!")
 ]
 var messages4 = [
     Message(sender: currentUser, timestamp: Date(), message: "Bonjour, j'ai beaucoup apprécié la sensibilité de votre présentation. Ma grand mère adorerait passer un dimanche entourée de petits enfants. Elle est très patiente et excellente cuisinière, je pense que le profil de votre famille lui conviendrait à merveille. Dites moi ce qui pourrait faire plaisir à votre maman?"),
@@ -95,4 +92,4 @@ var conversation4 = Conversation(matchedFamily: families[3], messages: messages4
 var conversation5 = Conversation(matchedFamily: families[4], messages: messages5)
 
 
-var conversations = [conversation1, conversation2, conversation3, conversation4, conversation5]
+var conversations = [conversation1, conversation2, conversation4, conversation5]
